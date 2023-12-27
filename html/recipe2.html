@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+        <script type = "text/javascript" src = recipes.js></script>
+        <title>
+            Jason's Recipe Warehouse
+        </title>
+    </head>
+    <body>
+        <header class = "header">
+            <h1 class = "h1">Jason's Recipe Warehouse</h1>
+            <nav class = "nav">
+                <a class = "links" href="mainPage.html">Home</a>
+                <a class = "links" href="aboutMe.html">About Me</a>
+            </nav>  
+        </header>
+        <main class = "main">
+            <pre id="pre-formatter"><code id="json"></code></pre>
+            <section class = "recipe">
+                <div class = "contentHeader">
+                    <h3 id = "recipeName">Baked Salmon</h3>
+                    <button class="cool-button" role="button" onclick = "recipeToJSON()"> Convert Recipe into JSON!</button>
+                </div>
+                <div class="container">
+                    <img id = "recipeImage" class = "recipeImage" src="images/Salmon Photo.jpeg">
+                    <p id = "recipeDescription" class = "recipeDescription">
+                        Next up is one of my favorite dinner items, Baked Salmon!
+                    </p>
+                </div>
+            </section>
+            <section class = "recipe">
+                <h3>Ingredients</h3>
+                <div class="container">
+                    <ul id = "ingredientList">
+                        <li>1-2 Fillets of Salmon</li>
+                        <li>Sesame Seeds</li>
+                        <li>Tamari Sauce</li>
+                    </ul>
+                </div>
+                <div class = "form-group">
+                    <h4>Add Ingredients</h4>
+                    <label for="newIngredient">Ingredient: </label>
+                    <input id="newIngredient" class="form-element" placeholder="2 cups of spinach" value=""/>
+                    <button class="form-button" onclick="addIngredient()">Add Ingredient</button>
+                </div>                
+            </section>
+            <section class = "recipe">
+                <h3>Preperation</h3>
+                <div class="container">
+                    <ol id = "instructionList">
+                        <li>Heat over to 450 degs F on Broil</li>
+                        <li>Line flat broiling pan with foil</li>
+                        <li>Use tweezers to pull out all of the bones from the fillets</li>
+                        <li>Apply tamari suace to salmon using a spoon</li>
+                        <li>Bake salmon for 13 minutes</li>
+                        <li>Take salmon out to reapply tamari suace and sprinkle sesame seeds</li>
+                        <li>Bake for another 2-3 minutes</li>
+                        <li>Check for doneness</li>
+                    </ol>
+                </div>
+                <div class = "form-group">
+                    <h4>Add Ingredients</h4>
+                    <label for="newInstruction">Ingredient: </label>
+                    <input id="newInstruction" class="form-element" placeholder="Bring to a boil" value=""/>
+                    <button class="form-button" onclick="addInstruction()">Add Instruction</button>
+                </div>          
+            </section>
+        </main>
+    </body>
+</html>

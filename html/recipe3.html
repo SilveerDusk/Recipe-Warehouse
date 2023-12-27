@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+        <script type = "text/javascript" src = recipes.js></script>
+        <title>
+            Jason's Recipe Warehouse
+        </title>
+    </head>
+    <body>
+        <header class = "header">
+            <h1 class = "h1">Jason's Recipe Warehouse</h1>
+            <nav class = "nav">
+                <a class = "links" href="mainPage.html">Home</a>
+                <a class = "links" href="aboutMe.html">About Me</a>
+            </nav>  
+        </header>
+        <main class = "main">
+            <pre id="pre-formatter"><code id="json"></code></pre>
+            <section class = "recipe">
+                <div class = "contentHeader">
+                    <h3 id = "recipeName">Nana's Special Cheesecake</h3>
+                    <button class="cool-button" role="button" onclick = "twoPartRecipeToJSON()"> Convert Recipe into JSON!</button>
+                </div>
+                <div class="container">
+                    <img id = "recipeImage" class = "recipeImage" src="images/Cheesecake photo.jpeg">
+                    <p id = "recipeDescription" class = "recipeDescription">
+                        Lastly, my favorite dessert! I recently just learned how to make this one. It is my Nana's Special Cheesecake recipe.
+                    </p>
+                </div>
+            </section>
+            <section class = "recipe">
+                <h3>Ingredients</h3>
+                <div class="content">
+                    <section>
+                        <h3>Filling</h3>
+                        <ul id = "partOneIngredientList">
+                            <li>12 Onces Cream Chesse</li>
+                            <li>2 Tbs. Rich Milk</li>
+                            <li>1 Tsp. Lemon Juice</li>
+                            <li>Half of a Lemon Rind Grated</li>
+                            <li>2 Eggs, Beaten</li>
+                            <li>Dash of Salt</li>
+                            <li>Dash of Nutmeg</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Chrust</h3>
+                        <ul id = "partTwoIngredientList">
+                            <li>Sugar</li>
+                            <li>Vanilla Extract</li>
+                            <li>2 Cups Crushed Graham Crackers or Vanilla Waffers</li>
+                            <li>1 Stick of Butter</li>
+                            <li>1 Cup Sour Cream</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class = "form-group">
+                    <h4>Add Filling Ingredients</h4>
+                    <label for="newFillingIngredient">Ingredient: </label>
+                    <input id="newFillingIngredient" class="form-element" placeholder="2 cups of spinach" value=""/>
+                    <button class="form-button" onclick="addFillingIngredient()">Add Ingredient</button>
+                </div>
+                <div class = "form-group">
+                    <h4>Add Crust Ingredients</h4>
+                    <label for="newCrustIngredient">Ingredient: </label>
+                    <input id="newCrustIngredient" class="form-element" placeholder="2 cups of spinach" value=""/>
+                    <button class="form-button" onclick="addCrustIngredient()">Add Ingredient</button>
+                </div>             
+            </section>
+            <section class = "recipe">
+                <h3>Preperation</h3>
+                <div class="container">
+                    <ol id = "instructionList">
+                        <li>Let cream cheese soften at room temperature</li>
+                        <li>Once cream cheese is softened, beat with the milk and add the next 5 ingredients, 1/2 cup sugar and 1/2 tsp. vanilla; blend</li>
+                        <li>Mix crumbs and butte, and press in 9 inch pipepan. Put cheese mixture in unbaked crust and make in moderate oven at 375 degs for 20 minutes</li>
+                        <li>Let cool 1/2 hour</li>
+                        <li>Make topping of sour scream, 1/4 cup sugar, and 1/2 tsp. vanilla</li>
+                        <li>Speard topping over cool cake and return to very hot overn at 450 degs for 5 minutes</li>
+                        <li>Note: I usually use prepared graham cracker crusts and grate a little bit more lemon rine than needed</li>
+                    </ol>
+                </div>
+                <div class = "form-group">
+                    <h4>Add Ingredients</h4>
+                    <label for="newInstruction">Ingredient: </label>
+                    <input id="newInstruction" class="form-element" placeholder="Bring to a boil" value=""/>
+                    <button class="form-button" onclick="addInstruction()">Add Instruction</button>
+                </div>          
+            </section>
+        </main>
+    </body>
+</html>

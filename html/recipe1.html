@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+        <script type = "text/javascript" src = recipes.js></script>
+        <title>
+            Jason's Recipe Warehouse
+        </title>
+    </head>
+    <body>
+        <header class = "header">
+            <h1 class = "h1">Jason's Recipe Warehouse</h1>
+            <nav class = "nav">
+                <a class = "links" href="mainPage.html">Home</a>
+                <a class = "links" href="aboutMe.html">About Me</a>
+            </nav>  
+        </header>
+        <main class = "main">
+            <pre id="pre-formatter"><code id="json"></code></pre>
+            <section class = "recipe">
+                <div class = "contentHeader">
+                    <h3 id = "recipeName">Santa's Workshop Pancakes</h3>
+                    <button class="cool-button" role="button" onclick = "recipeToJSON()"> Convert Recipe into JSON!</button>
+                </div>
+                <div class="container">
+                    <img id = "recipeImage" class = "recipeImage" src="images/Pancake Photo.jpeg">
+                    <p id = "recipeDescription" class = "recipeDescription">
+                        The Santa's Workshop Pancakes are a family breakfast classic. If you're feeling fancy you can even use molds!
+                    </p>
+                </div>        
+            </section>
+            <section class = "recipe">
+                <h3>Ingredients</h3>
+                <div class="container">
+                    <ul id = "ingredientList">
+                        <li id = "ingredient1" onclick="strikeThrough(id)">2 Eggs</li>
+                        <li id = "ingredient2" onclick="strikeThrough(id)">2 Cups All Purpose Flour</li>
+                        <li id = "ingredient3" onclick="strikeThrough(id)">3 Tbs. Sugar</li>
+                        <li id = "ingredient4" onclick="strikeThrough(id)">2 Tsp. Baking Powder</li>
+                        <li id = "ingredient5" onclick="strikeThrough(id)">1 Tsp. Baking Soda</li>
+                        <li id = "ingredient6" onclick="strikeThrough(id)">1 Tsp. Salt</li>
+                        <li id = "ingredient7" onclick="strikeThrough(id)">2.5 Cups Buttermilk</li>
+                        <li id = "ingredient8" onclick="strikeThrough(id)">4 Tbs. Unsalted Butter Melted</li>
+                        <li id = "ingredient9" onclick="strikeThrough(id)">1/2 Tsp. Vanilla Extract</li>
+                        <li id = "ingredient10" onclick="strikeThrough(id)">Nonstick Spray</li>
+                        <li id = "ingredient11" onclick="strikeThrough(id)">Syrup for Serving</li>
+                    </ul>
+                </div>
+                <div class = "form-group">
+                    <h4>Add Ingredients</h4>
+                    <label for="newIngredient">Ingredient: </label>
+                    <input id="newIngredient" class="form-element" placeholder="2 cups of spinach" value=""/>
+                    <button class="form-button" onclick="addIngredient()">Add Ingredient</button>
+                </div>        
+            </section>
+            <section class = "recipe">
+                <h3>Preperation</h3>
+                <div class="container">
+                    <ol id = "instructionList">
+                        <li>Add dry ingredients to a mixing bowl</li>
+                        <li>Beat eggs, melt butter and add wet ingredients in another bowl</li>
+                        <li>Once both mixes are slight mixed add them together and mix until there are no chunks</li>
+                        <li>Heat gridle or pan until a drop of water quickly evaporates</li>
+                        <li>Spray gridle or pan with nonstick spray and then add 1/3 cup batter to make pancake</li>
+                        <li>Once all bubble pop flip, the pancake</li>
+                        <li>Serve with toppings of your choice</li>
+                    </ol>
+                </div>
+                <div class = "form-group">
+                    <h4>Add Ingredients</h4>
+                    <label for="newInstruction">Ingredient: </label>
+                    <input id="newInstruction" class="form-element" placeholder="Bring to a boil" value=""/>
+                    <button class="form-button" onclick="addInstruction()">Add Instruction</button>
+                </div>  
+            </section>
+        </main>
+    </body>
+</html>
